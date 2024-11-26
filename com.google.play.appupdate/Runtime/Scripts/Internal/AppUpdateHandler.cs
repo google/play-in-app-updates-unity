@@ -61,6 +61,7 @@ namespace Google.Play.AppUpdate.Internal
             if (isPaused)
             {
                 StopListeningForUpdates();
+                _appUpdateManagerInternal.CancelRequest();
             }
             else
             {

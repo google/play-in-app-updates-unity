@@ -179,6 +179,18 @@ namespace Google.Play.AppUpdate.Internal
             return completeUpdateAsyncOperation;
         }
 
+        /// <summary>
+        /// Cancels the current update request.
+        /// </summary>
+        public void CancelRequest() {
+            if (_appUpdateRequest.Status == AppUpdateStatus.Unknown) {
+                _appUpdateRequest.SetUpdateActivityResult(ActivityResult.ResultCancelled);
+                // Set app update request to null to avoid the "Another update flow is already in
+                // progress" error when a new request is made.
+                _appUpdateRequest = null;
+            }
+        }
+
         private void InitiateRequest(AppUpdateRequestImpl request, AppUpdateInfo appUpdateInfo,
             AppUpdateOptions appUpdateOptions)
         {
