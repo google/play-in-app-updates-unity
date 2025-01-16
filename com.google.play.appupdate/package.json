@@ -2,7 +2,7 @@
   "name": "com.google.play.appupdate",
   "displayName": "Google Play In-app Updates",
   "description": "Enables the user to install an app update without exiting to the Play Store.",
-  "version": "1.8.3",
+  "version": "1.8.4",
   "unity": "2018.4",
   "author": {
     "name": "Google LLC"
