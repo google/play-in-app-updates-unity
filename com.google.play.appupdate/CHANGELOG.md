@@ -1,5 +1,8 @@
 # Changelog for com.google.play.appupdate
 
+## [1.8.5] - 2025-02-05
+- Updated Play Core dependency to 1.8.6.
+
 ## [1.8.4] - 2025-01-15
 - Add null check to CancelRequest method.
 
